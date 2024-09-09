@@ -1,24 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Vkc-7U-Ol3">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="898"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gr3-8K-Vnb">
+                                <rect key="frame" x="10" y="69" width="410" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="8Wj-cA-uFn"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEx-HS-8EN">
+                                <rect key="frame" x="165" y="416" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="b9F-DX-cZp"/>
+                                    <constraint firstAttribute="height" constant="100" id="tD7-wo-Kuq"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start" titleAlignment="center">
+                                    <backgroundConfiguration key="background" image="stopButton"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tul-6X-5pL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7m-mO-uYS">
+                                <rect key="frame" x="20" y="207" width="390" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Gd6-Es-bAh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vkc-7U-Ol3" secondAttribute="trailing" id="Cfl-GP-USI"/>
+                            <constraint firstItem="gr3-8K-Vnb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="I6y-2I-YgI"/>
+                            <constraint firstItem="Vkc-7U-Ol3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PvU-la-eGG"/>
+                            <constraint firstItem="Vkc-7U-Ol3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="X16-si-JR0"/>
+                            <constraint firstItem="gr3-8K-Vnb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Xfp-TZ-gAr"/>
+                            <constraint firstItem="N7m-mO-uYS" firstAttribute="top" secondItem="gr3-8K-Vnb" secondAttribute="bottom" constant="10" id="csS-RY-Wkh"/>
+                            <constraint firstItem="lEx-HS-8EN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="g9h-VL-Ihf"/>
+                            <constraint firstItem="Vkc-7U-Ol3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m64-4F-egz"/>
+                            <constraint firstItem="N7m-mO-uYS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pYX-wA-rQc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gr3-8K-Vnb" secondAttribute="trailing" constant="10" id="r5h-g1-NoW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N7m-mO-uYS" secondAttribute="trailing" constant="20" id="tnX-KO-HTk"/>
+                            <constraint firstItem="lEx-HS-8EN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="weh-ab-1Xh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="N7m-mO-uYS" id="znc-uY-bak"/>
+                        <outlet property="startButton" destination="lEx-HS-8EN" id="ftz-dk-wNC"/>
+                        <outlet property="traddicLight" destination="gr3-8K-Vnb" id="3MR-Ho-g4c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="100.46511627906976" y="3.218884120171674"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="1600" height="900"/>
+        <image name="stopButton" width="1000" height="1000"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
