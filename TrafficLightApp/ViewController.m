@@ -30,6 +30,8 @@
     self.traddicLight.image = [UIImage imageNamed:@"trafficLight.png"];
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(startCount) userInfo:nil repeats:YES];
     self.startButton.enabled = NO;
+  }else {
+    [scoreTimer invalidate];
   }
 
 }
